@@ -4,6 +4,7 @@ cmake_minimum_required(VERSION 3.12)
 set(src 
    main.cpp
    add1.cpp
+   audio.cpp
  )
 # process exported functions
 # set compiler and flags
