@@ -192,3 +192,18 @@ typings/
 .dynamodb/
 
 
+### https://raw.github.com/github/gitignore/7eef17f37c63ce3cbddbdd154ff836f370d0ad70/CMake.gitignore
+
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps
+
+
