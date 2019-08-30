@@ -1,9 +1,9 @@
 {
   "name": "wasm-juce-example",
   "scripts": {
-    "install:emsdk": "node_modules/emsdk/emsdk install latest && node_modules/emsdk/emsdk activate latest",
+    "postinstall": "[ -d node_modules/emsdk/fastcomp/emscripten ] || node_modules/emsdk/emsdk install latest",
     "compile": "cd build && EMSCRIPTEN=../node_modules/emsdk/fastcomp/emscripten CXX=$EMSCRIPTEN/em++ C=$EMSCRIPTEN/emcc cmake ../src && make",
-    "serve": "emrun --port 8080 ./web"
+    "serve": "node_modules/emsdk/fastcomp/emscripten/emrun --port 8080 ./web"
   },
   "version": "1.0.0",
   "main": "",
