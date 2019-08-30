@@ -1,0 +1,16 @@
+{
+  "name": "wasm-juce-example",
+  "scripts": {
+    "install:emsdk": "node_modules/emsdk/emsdk install latest && node_modules/emsdk/emsdk activate latest",
+    "compile": "em++ src/Main.cpp src/add1.cpp -g -s WASM=1 -s EXPORT_ALL=1 -o main.js && mv main.js main.was* web/dist ",
+    "serve": "emrun --port 8080 ./web"
+  },
+  "version": "1.0.0",
+  "main": "",
+  "repository": "https://github.com/szk2s/wasm-juce-example",
+  "author": "szk2s <suzukisjss@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "emsdk": "https://github.com/emscripten-core/emsdk.git"
+  }
+}
