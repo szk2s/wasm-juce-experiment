@@ -1,0 +1,12 @@
+<html>
+  <body>
+    <input id="input" type="number"><span> + 1 = </span><span id="answer"></span>
+    <script src="dist/main.js"></script>
+    <script>
+      const add1 = (x) => Module.__Z4add1i(x);
+      document.getElementById('input').addEventListener('change', (event) => {
+        document.getElementById('answer').innerText = add1(parseInt(event.target.value));
+      })
+    </script>
+  </body>
+</html>
