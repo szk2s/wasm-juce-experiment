@@ -2,7 +2,7 @@
   "name": "wasm-juce-example",
   "scripts": {
     "postinstall": "[ -d node_modules/emsdk/fastcomp/emscripten ] || node_modules/emsdk/emsdk install latest",
-    "compile": "cd Builds/WASM && emmake make -B && mv main.wasm ../../web/dist && mv main.js ../../web/dist",
+    "compile": "cd Builds/WASM && ../../node_modules/emsdk/fastcomp/emscripten/emmake make -B",
     "serve": "node_modules/emsdk/fastcomp/emscripten/emrun --port 8080 ./web"
   },
   "version": "1.0.0",
@@ -12,5 +12,8 @@
   "license": "MIT",
   "devDependencies": {
     "emsdk": "https://github.com/emscripten-core/emsdk.git"
+  },
+  "dependencies": {
+    "JUCE": "https://github.com/szk2s/JUCE"
   }
 }
